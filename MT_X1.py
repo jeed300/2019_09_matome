@@ -1,5 +1,5 @@
 import pigpio
-import time
+import time	#tesut
 
 pi = pigpio.pi()
 
