@@ -1,9 +1,35 @@
 import pigpio
-import time	#tesut
+import time
 
 pi = pigpio.pi()
 
-pi.set_servo_pulsewidth(4, 1300) #アーム全体　中央1300
-time.sleep(3)
-pi.set_servo_pulsewidth(13, 1500) #アーム高さ　1500
-time.sleep(3)
+
+def setup():
+	pi.set_servo_pulsewidth(4, 1300) #armall center1300
+	time.sleep(3)
+	pi.set_servo_pulsewidth(13, 1500) #armhight 1500
+	time.sleep(3)
+	pi.set_servo_pulsewidth(5, 1000) #arm position
+	time.sleep(3)
+	pi.set_servo_pulsewidth(6,800) #arm grab
+	time.sleep(3)
+	
+def main():
+	print("setup start...")
+	setup()
+	print("setuo end...")
+  
+	pi.set_servo_pulsewidth(13, 2000)
+	time.sleep(3)
+	pi.set_servo_pulsewidth(5, 1500)
+	time.sleep(3)
+	pi.set_servo_pulsewidth(6,1500)
+	time.sleep(3)
+	print("arm get start...")
+	
+	pi.set_servo_pulsewidth(5,1000)
+	time.sleep(3)
+	pi.set_servo_pulsewidth(13,1500)
+	time,sleep(3)
+	print("arm get end...")
+	
