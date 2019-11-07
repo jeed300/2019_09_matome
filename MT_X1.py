@@ -17,19 +17,11 @@ def setup():
 def main():
 	print("setup start...")
 	setup()
-	print("setuo end...")
+	print("setup end...")
+  
+	print("X start!")
   
 	pi.set_servo_pulsewidth(13, 2000)
 	time.sleep(3)
-	pi.set_servo_pulsewidth(5, 1500)
-	time.sleep(3)
-	pi.set_servo_pulsewidth(6,1500)
-	time.sleep(3)
-	print("arm get start...")
 	
-	pi.set_servo_pulsewidth(5,1000)
-	time.sleep(3)
-	pi.set_servo_pulsewidth(13,1500)
-	time,sleep(3)
-	print("arm get end...")
-	
+	print("X arm get end...")
